@@ -150,8 +150,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Blog Single</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/add-chef')}}">ADD CHEF</a></li>
-						<li><a href="{{URL::to('/all-chef')}}">ALL CHEF</a></li>
+						<li><a href="{{URL::to('/add-blog-single')}}">ADD BLOG SINGLE</a></li>
+						<li><a href="{{URL::to('/all-blog-single')}}">ALL BLOG SINGLE</a></li>
                       
                     </ul>
                 </li>

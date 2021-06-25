@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                           UPDATE blog
+                           UPDATE BLOG SINGLE
                         </header>
                          <?php
                             $message = Session::get('message');
@@ -16,30 +16,31 @@
                         <div class="panel-body">
 
                             <div class="position-center">
-                                @foreach($edit_blog as $key => $blog)
-                                <form role="form" action="{{URL::to('/update-blog/'.$blog->blog_id)}}" method="post" enctype="multipart/form-data">
+                                @foreach($edit_blog_single as $blog_single)
+                                <form role="form" action="{{URL::to('/update-blog-single/'.$blog_single->blog_single_id)}}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">IMAGE BLOG SINGLE</label>
+                                        <input type="file" name="blog_single_image" class="form-control" id="exampleInputEmail1" >
+                                        <img src="{{URL::to('public/uploads/blog/'.$blog_single->blog_single_image)}}" height="100" width="100">
+                                    </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">BLOG TITLE</label>
-                                    <input type="text" name="blog_title" class="form-control" id="exampleInputEmail1" value="{{$blog->blog_title}}">
+                                    <label for="exampleInputEmail1">BLOG SINGLE TITLE</label>
+                                    <input type="text" name="blog_single_title" class="form-control" id="exampleInputEmail1" value="{{$blog_single->blog_single_title}}">
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">BLOG POST</label>
-                                    <textarea style="resize: none" rows="8" class="form-control" name="blog_post" id="exampleInputPassword1">{{$blog->blog_post}}</textarea>
+                                    <label for="exampleInputPassword1">BLOG SINGLE NAME</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="blog_single_name" id="exampleInputPassword1">{{$blog_single->blog_single_name}}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">BLOG DATE</label>
-                                    <textarea style="resize: none" rows="8" class="form-control" name="blog_date" id="exampleInputPassword1">{{$blog->blog_date}}</textarea>
+                                    <label for="exampleInputPassword1">BLOG SINGLE TEXT</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="blog_single_text" id="exampleInputPassword1">{{$blog_single->blog_single_text}}</textarea>
                                 </div>
-                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">BLOG TEXT</label>
-                                    <textarea style="resize: none" rows="8" class="form-control" name="blog_text" id="exampleInputPassword1">{{$blog->blog_text}}
-                                    </textarea>
-                                </div>
+                                
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">DISPLAY</label>
-                                      <select name="blog_status" class="form-control input-sm m-bot15">
+                                      <select name="blog_single_status" class="form-control input-sm m-bot15">
                                             <option value="0">HIDE</option>
                                             <option value="1">DISPLAY</option>
                                     </select>

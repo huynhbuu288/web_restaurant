@@ -26,25 +26,25 @@
             </div>
         </div>
         <div class="row">
+            @foreach($all_blog as $blog)
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="blog-box-inner">
                     <div class="blog-img-box">
                         <img class="img-fluid" src="{{('public/images/blog-img-01.jpg')}}" alt="">
                     </div>
                     <div class="blog-detail">
-                        <h4>Duis feugiat neque sed dolor cursus.</h4>
+                        <h4>{{$blog->blog_title}}</h4>
                         <ul>
-                            <li><span>Post by Admin</span></li>
+                            <li><span>{{$blog->blog_post}}</span></li>
                             <li>|</li>
-                            <li><span>27 February 2018</span></li>
+                            <li><span>{{$blog->blog_date}}</span></li>
                         </ul>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque auctor suscipit feugiat. Ut at pellentesque ante, sed convallis arcu. Nullam facilisis, eros in eleifend luctus, odio ante sodales augue, eget lacinia lectus erat et sem. </p>
-                        <p>Sed semper orci sit amet porta placerat. Etiam quis finibus eros. </p>
+                        <p>{{$blog->blog_text}}</p>
                         <a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Read More</a>
                     </div>
                 </div>
             </div>
-           
+           @endforeach
         </div>
     </div>
 </div>

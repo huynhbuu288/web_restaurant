@@ -111,7 +111,7 @@ Route::post('/update-chef/{chef_id}','App\Http\Controllers\ChefController@update
 // Route::get('/manage-order','App\Http\Controllers\OrderController@manage_order');
 // Route::get('/manage-order','App\Http\Controllers\OrderController@manage_order');
 
-///chef
+///BLOG
 Route::get('/add-blog','App\Http\Controllers\BlogController@add_blog');
 Route::get('/all-blog','App\Http\Controllers\BlogController@all_blog');
 
@@ -124,3 +124,17 @@ Route::get('/edit-blog/{blog_id}','App\Http\Controllers\BlogController@edit_blog
 Route::get('/delete-blog/{blog_id}','App\Http\Controllers\BlogController@delete_blog');
 
 Route::post('/update-blog/{blog_id}','App\Http\Controllers\BlogController@update_blog');
+
+///BLOG-SINGLE
+Route::get('/add-blog-single','App\Http\Controllers\BlogController@add_blog_single');
+Route::get('/all-blog-single','App\Http\Controllers\BlogController@all_blog_single');
+
+Route::post('/save-blog-single','App\Http\Controllers\BlogController@save_blog_single');
+
+Route::get('/unactive-blog-single/{blog_single_id}','App\Http\Controllers\BlogController@unactive_blog_single');
+Route::get('/active-blog-single/{blog_single_id}','App\Http\Controllers\BlogController@active_blog_single');
+
+Route::get('/edit-blog-single/{blog_single_id}','App\Http\Controllers\BlogController@edit_blog_single');
+Route::get('/delete-blog-single/{blog_single_id}','App\Http\Controllers\BlogController@delete_blog_single');
+
+Route::post('/update-blog-single/{blog_single_id}','App\Http\Controllers\BlogController@update_blog_single');
