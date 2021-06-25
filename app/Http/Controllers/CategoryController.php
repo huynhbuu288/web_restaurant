@@ -12,12 +12,12 @@ session_start();
 class CategoryController extends Controller
 {
     public function add_category(){
-        return view('admin.add_category');
+        return view('admin.category.add_category');
     }
     public function all_category(){
         $all_category = Category::get();
-    	$manager_category  = view('admin.all_category')->with('all_category',$all_category);
-    	return view('admin_layout')->with('admin.all_category', $manager_category);
+    	$manager_category  = view('admin.category.all_category')->with('all_category',$all_category);
+    	return view('admin_layout')->with('admin.category.all_category', $manager_category);
     }
     public function save_category(Request $request){
         $data = $request->all();
@@ -28,7 +28,7 @@ class CategoryController extends Controller
         $category['category_status'] = $request->category_status;
         $category->save();
     	Session::put('message','Thêm danh mục sản phẩm thành công');
-    	return Redirect::to('admin.all_category');
+    	return Redirect::to('admin.category.all_category');
     }
     public function update_category(Request $request,$category_id){
         $data = $request->all();
@@ -55,8 +55,8 @@ class CategoryController extends Controller
     }
     public function edit_category($category_id){
         $edit_category= Category::where('category_id',$category_id)->get();
-        $manager_category = view('admin.edit_category')->with('edit_category',$edit_category);
-        return view('admin_layout')->with('admin.edit_category', $manager_category);
+        $manager_category = view('admin.category.edit_category')->with('edit_category',$edit_category);
+        return view('admin_layout')->with('admin.category.edit_category', $manager_category);
     
     }
     public function delete_category($category_id){

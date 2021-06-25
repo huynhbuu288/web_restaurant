@@ -14,7 +14,7 @@ class ProductController extends Controller
 {
     public function add_product(){
         $cate_product = Category::orderby('category_id','desc')->get(); 
-        return view('admin.add_product')->with('cate_product', $cate_product);
+        return view('admin.product.add_product')->with('cate_product', $cate_product);
     }
     public function all_product(){
     
@@ -22,8 +22,8 @@ class ProductController extends Controller
         join('tbl_category','tbl_category.category_id','=','tbl_product.category_id')
         
         ->orderby('tbl_product.product_id','desc')->paginate(5);
-    	$manager_product  = view('admin.all_product')->with('all_product',$all_product);
-    	return view('admin_layout')->with('admin.all_product', $manager_product);
+    	$manager_product  = view('admin.product.all_product')->with('all_product',$all_product);
+    	return view('admin_layout')->with('admin.product.all_product', $manager_product);
 
     }
     public function save_product(Request $request){
@@ -89,9 +89,9 @@ public function update_product(Request $request,$product_id){
     public function edit_product($product_id){
        $cate_product = Category::orderby('category_id','desc')->get(); 
        $edit_product = Product::where('product_id',$product_id)->get();
-       $manager_product  = view('admin.edit_product')->with('edit_product',$edit_product)->with('cate_product',$cate_product);
+       $manager_product  = view('admin.product.edit_product')->with('edit_product',$edit_product)->with('cate_product',$cate_product);
 
-       return view('admin_layout')->with('admin.edit_product', $manager_product);
+       return view('admin_layout')->with('admin.product.edit_product', $manager_product);
    }
     public function delete_product($product_id){
         product::where('product_id',$product_id)->delete();

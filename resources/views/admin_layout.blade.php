@@ -88,6 +88,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Tổng quan</span>
                     </a>
                 </li>
+				<li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>ORDER TABLE</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/manage-order')}}">ORDER TABLE</a></li>
+						
+                      
+                    </ul>
+                </li>
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
@@ -110,10 +121,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                       
                     </ul>
                 </li>
+				
                   <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
                         <span>CHEF</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/add-chef')}}">ADD CHEF</a></li>
+						<li><a href="{{URL::to('/all-chef')}}">ALL CHEF</a></li>
+                      
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>BLOG</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/add-blog')}}">ADD BLOG</a></li>
+						<li><a href="{{URL::to('/all-blog')}}">ALL BLOG</a></li>
+                      
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Blog Single</span>
                     </a>
                     <ul class="sub">
 						<li><a href="{{URL::to('/add-chef')}}">ADD CHEF</a></li>

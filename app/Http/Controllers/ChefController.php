@@ -13,11 +13,11 @@ class ChefController extends Controller
         return view('pages.chef');
     }
     public function add_chef(){
-        return view('admin.add_chef');
+        return view('admin.cheff.add_chef');
     }
     public function all_chef(){
         $all_chef = Chef::get();
-        return view('admin.all_chef', compact('all_chef'));
+        return view('admin.cheff.all_chef', compact('all_chef'));
     }
  
     public function save_chef(Request $request){
@@ -62,7 +62,7 @@ class ChefController extends Controller
     public function edit_chef($chef_id){
         $edit_chef= chef::where('chef_id',$chef_id)->get();
         $manager_chef = view('admin.edit_chef')->with('edit_chef',$edit_chef);
-        return view('admin_layout')->with('admin.edit_chef', $manager_chef);
+        return view('admin_layout')->with('admin.chef.edit_chef', $manager_chef);
     
     }
     public function delete_chef($chef_id){

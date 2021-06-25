@@ -105,3 +105,22 @@ Route::get('/edit-chef/{chef_id}','App\Http\Controllers\ChefController@edit_chef
 Route::get('/delete-chef/{chef_id}','App\Http\Controllers\ChefController@delete_chef');
 
 Route::post('/update-chef/{chef_id}','App\Http\Controllers\ChefController@update_chef');
+
+
+///order
+// Route::get('/manage-order','App\Http\Controllers\OrderController@manage_order');
+// Route::get('/manage-order','App\Http\Controllers\OrderController@manage_order');
+
+///chef
+Route::get('/add-blog','App\Http\Controllers\BlogController@add_blog');
+Route::get('/all-blog','App\Http\Controllers\BlogController@all_blog');
+
+Route::post('/save-blog','App\Http\Controllers\BlogController@save_blog');
+
+Route::get('/unactive-blog/{blog_id}','App\Http\Controllers\BlogController@unactive_blog');
+Route::get('/active-blog/{blog_id}','App\Http\Controllers\BlogController@active_blog');
+
+Route::get('/edit-blog/{blog_id}','App\Http\Controllers\BlogController@edit_blog');
+Route::get('/delete-blog/{blog_id}','App\Http\Controllers\BlogController@delete_blog');
+
+Route::post('/update-blog/{blog_id}','App\Http\Controllers\BlogController@update_blog');
