@@ -36,7 +36,7 @@
 <header class="top-navbar">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="{{URL::to('/')}}">
 				<img src="{{asset('public/images/logo.png')}}" alt="" />
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">

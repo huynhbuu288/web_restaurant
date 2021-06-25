@@ -27,20 +27,22 @@
             </div>
         </div>
         <div class="row">
+            @foreach($all_chef as $daubep)
             <div class="col-md-4 col-sm-6">
                 <div class="our-team">
-                    <img src="{{('public/images/stuff-img-01.jpg')}}">
+                    <img src="{{URL::to('public/uploads/chef/'.$daubep->chef_image)}}">
                     <div class="team-content">
-                        <h3 class="title">Williamson</h3>
-                        <span class="post">Web Developer</span>
+                        <h3 class="title">{{$daubep->chef_name}}</h3>
+                        <span class="post">{{$daubep->chef_desc}}</span>
                         <ul class="social">
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a></li>
+                            <li><a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
+                   
                 </div>
-            </div>
+            </div> @endforeach
 
           
         </div>

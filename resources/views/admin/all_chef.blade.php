@@ -42,47 +42,52 @@
                 <input type="checkbox"><i></i>
               </label>
             </th>
-            <th>Tên sản phẩm</th>
-            <th>Slug</th>
-            <th>Giá</th>
-            <th>Hình sản phẩm</th>
-            <th>Danh mục</th>
-            <th>hiển thị</th>
+            <th>CHEF NAME</th>
+            <th>CHEF DESC</th>
+            <th>IMAGE CHEF</th>
+            <th>CHEF FB</th>
+            <th>CHEF TIW</th>
+            <th>CHEF GG</th>
+           
+            <th>DISPLAY</th>
             <th>EDIT/DELETE</th>
             
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-          @foreach($all_product as $key => $pro)
+          @foreach($all_chef as $key => $chef)
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>{{ $pro->product_name }}</td>
-         
-            <td>{{ $pro->product_slug }}</td>
-            <td>{{ number_format($pro->product_price,0,',','.') }}đ</td>
-            <td><img src="public/uploads/product/{{ $pro->product_image }}" height="100" width="100"></td>
-            <td>{{ $pro->category_name }}</td>
+            <td>{{ $chef->chef_name }}</td>
+            <td>{{ $chef->chef_desc }}</td>
+           
+            
+            <td><img src="public/uploads/chef/{{ $chef->chef_image }}" height="100" width="100"></td>
+            <td>{{ $chef->chef_fb }}</td>
+            <td>{{ $chef->chef_tiw }}</td>
+            <td>{{ $chef->chef_gg }}</td>
             
 
             <td><span class="text-ellipsis">
               <?php
-               if($pro->product_status==0){
+               if($chef->chef_status==0){
                 ?>
-                <a href="{{URL::to('/unactive-product/'.$pro->product_id)}}"><span class="fa-thumb-styling fa fa-thumbs-up"></span></a>
+                <a href="{{URL::to('/unactive-chef/'.$chef->chef_id)}}"><span class="fa-thumb-styling fa fa-thumbs-up"></span></a>
                 <?php
                  }else{
                 ?>  
-                 <a href="{{URL::to('/active-product/'.$pro->product_id)}}"><span class="fa-thumb-styling fa fa-thumbs-down"></span></a>
+                 <a href="{{URL::to('/active-chef/'.$chef->chef_id)}}"><span class="fa-thumb-styling fa fa-thumbs-down"></span></a>
                 <?php
                }
               ?>
             </span></td>
            
             <td>
-              <a href="{{URL::to('/edit-product/'.$pro->product_id)}}" class="active styling-edit" ui-toggle-class="">
+              <a href="{{URL::to('/edit-chef/'.$chef->chef_id)}}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc là muốn xóa sản phẩm này ko?')" href="{{URL::to('/delete-product/'.$pro->product_id)}}" class="active styling-edit" ui-toggle-class="">
+              <a onclick="return confirm('Are you sure you want to delete this chef?')" href="
+              {{URL::to('/delete-chef/'.$chef->chef_id)}}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-times text-danger text"></i>
               </a>
             </td>

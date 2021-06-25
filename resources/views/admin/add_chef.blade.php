@@ -39,21 +39,17 @@
                                     <label for="exampleInputPassword1">twitter CHEF</label>
                                     <textarea style="resize: none" rows="8" class="form-control" name="chef_tiw" id="exampleInputPassword1" placeholder="Nội dung sản phẩm"></textarea>
                                 </div>
-                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">google CHEF </label>
-                                      <select name="chef_gg" class="form-control input-sm m-bot15">
-                                        {{-- @foreach($cate_product as $key => $cate)
-                                            <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
-                                        @endforeach       --}}
-                                    </select>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">GOOGLE CHEF</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="chef_gg" id="exampleInputPassword1" placeholder="Nội dung sản phẩm"></textarea>
                                 </div>
+                                
                                 
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">DISPLAY</label>
-                                      <select name="product_status" class="form-control input-sm m-bot15">
+                                      <select name="chef_status" class="form-control input-sm m-bot15">
                                             <option value="0">HIDE</option>
                                             <option value="1">DISPLAY</option>
-                                            
                                     </select>
                                 </div>
                                

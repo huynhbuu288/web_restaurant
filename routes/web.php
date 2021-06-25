@@ -89,11 +89,19 @@ Route::get('/category-product/{category_id}','App\Http\Controllers\CategoryContr
 // Route::get('/chi-tiet/{product_slug}','ProductController@details_product');
 
 Route::get('/menu','App\Http\Controllers\MenuController@categoryMenu');
+Route::get('/chef','App\Http\Controllers\PagesController@chef');
 
 
 ///chef
 Route::get('/add-chef','App\Http\Controllers\ChefController@add_chef');
 Route::get('/all-chef','App\Http\Controllers\ChefController@all_chef');
 
-Route::get('/save-chef','App\Http\Controllers\ChefController@save_chef');
+Route::post('/save-chef','App\Http\Controllers\ChefController@save_chef');
 
+Route::get('/unactive-chef/{chef_id}','App\Http\Controllers\ChefController@unactive_chef');
+Route::get('/active-chef/{chef_id}','App\Http\Controllers\ChefController@active_chef');
+
+Route::get('/edit-chef/{chef_id}','App\Http\Controllers\ChefController@edit_chef');
+Route::get('/delete-chef/{chef_id}','App\Http\Controllers\ChefController@delete_chef');
+
+Route::post('/update-chef/{chef_id}','App\Http\Controllers\ChefController@update_chef');

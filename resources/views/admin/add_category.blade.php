@@ -32,11 +32,6 @@
                                      name="category_desc" id="exampleInputPassword1" placeholder="
                                      describe category"></textarea>
                                 </div>
-                                {{-- <div class="form-group">
-                                    <label for="exampleInputPassword1">Từ Khóa danh mục</label>
-                                    <textarea style="resize: none" rows="8" class="form-control"
-                                     name="category_product_keywords" id="exampleInputPassword1" placeholder="Từ Khóa danh mục"></textarea>
-                                </div> --}}
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">DISLAY</label>
                                       <select name="category_status" class="form-control input-sm m-bot15">
@@ -46,7 +41,7 @@
                                     </select>
                                 </div>
                                
-                                <button type="submit" name="add_category" class="btn btn-info">Thêm danh mục</button>
+                                <button type="submit" name="add_category" class="btn btn-info">ADD CATEGORY<button>
                                 </form>
                             </div>
 

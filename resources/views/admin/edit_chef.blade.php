@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                     <section class="panel">
                         <header class="panel-heading">
-                           Cập nhật sản phẩm
+                           UPDATE CHEF
                         </header>
                          <?php
                             $message = Session::get('message');
@@ -16,49 +16,47 @@
                         <div class="panel-body">
 
                             <div class="position-center">
-                                @foreach($edit_product as $key => $pro)
-                                <form role="form" action="{{URL::to('/update-product/'.$pro->product_id)}}" method="post" enctype="multipart/form-data">
+                                @foreach($edit_chef as $key => $chef)
+                                <form role="form" action="{{URL::to('/update-chef/'.$chef->chef_id)}}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">NAME PRO</label>
-                                    <input type="text" name="product_name" class="form-control" id="exampleInputEmail1" value="{{$pro->product_name}}">
-                                </div>
-                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Slug</label>
-                                    <input type="text" name="product_slug" class="form-control" id="exampleInputEmail1" value="{{$pro->product_slug}}">
-                                </div>
-                                     <div class="form-group">
-                                    <label for="exampleInputEmail1">Giá sản phẩm</label>
-                                    <input type="text" value="{{$pro->product_price}}" name="product_price" class="form-control" id="exampleInputEmail1" >
-                                </div>
-                                  <div class="form-group">
-                                    <label for="exampleInputEmail1">IMAGE PRODUCT</label>
-                                    <input type="file" name="product_image" class="form-control" id="exampleInputEmail1">
-                                    <img src="{{URL::to('public/uploads/product/'.$pro->product_image)}}" height="100" width="100">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">DESCRIPT PRODUCT</label>
-                                    <textarea style="resize: none" rows="8" class="form-control" name="product_desc" id="exampleInputPassword1">{{$pro->product_desc}}</textarea>
+                                    <label for="exampleInputEmail1">NAME CHEF</label>
+                                    <input type="text" name="chef_name" class="form-control" id="exampleInputEmail1" value="{{$chef->chef_name}}">
                                 </div>
                                  
+                                  <div class="form-group">
+                                    <label for="exampleInputEmail1">IMAGE CHEF</label>
+                                    <input type="file" name="chef_image" class="form-control" id="exampleInputEmail1">
+                                    <img src="{{URL::to('public/uploads/chef/'.$chef->chef_image)}}" height="100" width="100">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">DESCRIPT CHEF</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="chef_desc" id="exampleInputPassword1">{{$chef->chef_desc}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">FACEBOOK CHEF</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="chef_fb" id="exampleInputPassword1">{{$chef->chef_fb}}</textarea>
+                                </div>
                                  <div class="form-group">
-                                    <label for="exampleInputPassword1">Danh mục sản phẩm</label>
-                                      <select name="category_product" class="form-control input-sm m-bot15">
-                                        @foreach($cate_product as $key => $cate)
-                                        @if($cate->category_id==$pro->category_id)
-                                        <option selected value="{{$cate->category_id}}">{{$cate->category_name}}</option>
-                                        @else
-                                        <option value="{{$cate->category_id}}">{{$cate->category_name}}</option>
-                                        @endif
-                                    @endforeach
-                                  
-                                            
+                                    <label for="exampleInputPassword1">twitter CHEF</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="chef_tiw" id="exampleInputPassword1">{{$chef->chef_tiw}}
+                                    </textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">GOOGLE CHEF</label>
+                                    <textarea style="resize: none" rows="8" class="form-control" name="chef_gg" id="exampleInputPassword1">{{$chef->chef_gg}}</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">DISPLAY</label>
+                                      <select name="chef_status" class="form-control input-sm m-bot15">
+                                            <option value="0">HIDE</option>
+                                            <option value="1">DISPLAY</option>
                                     </select>
                                 </div>
-
-                            
                                
-                                <button type="submit" name="add_product" class="btn btn-info">Cập nhật sản phẩm</button>
+                                 
+                               
+                                <button type="submit" name="add_chef" class="btn btn-info">UPDATE CHEF</button>
                                 </form>
                                 @endforeach
                             </div>
