@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
      <!-- Site Metas -->
-    <title>Yamifood Restaurant - Responsive HTML5 Template</title>  
+    <title>Restaurant</title>  
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -148,6 +148,10 @@
 	<script src="{{asset('public/js/baguetteBox.min.js')}}"></script>
 	<script src="{{asset('public/js/form-validator.min.js')}}"></script>
     <script src="{{asset('public/js/contact-form-script.js')}}"></script>
-    <script src="{{asset('public/js/custom.js')}}"></script>
+    <script src="{{('public/js/custom.js')}}"></script>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" 
+	src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=231349251862307&autoLogAppEvents=1" 
+	nonce="Ic9ZhzUG"></script>
 </body>
 </html>

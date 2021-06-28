@@ -1,4 +1,4 @@
-{{-- @extends('admin_layout')
+@extends('admin_layout')
 @section('admin_content')
 <div class="table-agile-info">
   
@@ -9,23 +9,17 @@ Information Order
     </div>
     
     <div class="table-responsive">
-                      <?php
-                            $message = Session::get('message');
-                            if($message){
-                                echo '<span class="text-alert">'.$message.'</span>';
-                                Session::put('message',null);
-                            }
-                            ?>
+                     
       <table class="table table-striped b-t b-light">
         <thead>
           <tr>
             
             <th>Date</th>
             <th>Time</th>
-            <th>Number Of Peo</th>
+            <th>Number Of People</th>
             <th>Name Customer</th>
-            <th>Phone</th>
             <th>Email</th>
+            <th>Phone</th>
            
             
             <th style="width:30px;"></th>
@@ -50,4 +44,4 @@ Information Order
    
   </div>
 </div>
-@endsection --}}
+@endsection

@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    // public function manage_order(){
-    //     return view('admin.view_order');
-    // }
+    public function order_table(){
+        return view('admin.order.view_order');
+    }
     // public function order_table(Request $request){
     // 	$data = array();
     // 	$data['date_order'] = $request->date_order;

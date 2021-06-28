@@ -107,8 +107,8 @@ Route::get('/delete-chef/{chef_id}','App\Http\Controllers\ChefController@delete_
 Route::post('/update-chef/{chef_id}','App\Http\Controllers\ChefController@update_chef');
 
 
-///order
-// Route::get('/manage-order','App\Http\Controllers\OrderController@manage_order');
+//order
+Route::get('/order-table','App\Http\Controllers\OrderController@order_table');
 // Route::get('/manage-order','App\Http\Controllers\OrderController@manage_order');
 
 ///BLOG

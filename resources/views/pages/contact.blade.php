@@ -12,6 +12,19 @@
     </div>
 </div>
 <!-- End All Pages -->
+<!-- Start Contact --->
+{{-- <div class="contatc-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-center">
+                    <h2>Contact</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                </div>
+            </div>        
+        </div>
+    </div>
+</div> --}}
 
 <!-- Start Contact -->
 

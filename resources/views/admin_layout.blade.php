@@ -94,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>ORDER TABLE</span>
                     </a>
                     <ul class="sub">
-						<li><a href="{{URL::to('/manage-order')}}">ORDER TABLE</a></li>
+						<li><a href="{{URL::to('/order-table')}}">ORDER TABLE</a></li>
 						
                       
                     </ul>

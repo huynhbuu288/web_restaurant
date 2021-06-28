@@ -33,19 +33,19 @@
                                 <h3>Book a table</h3>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input id="input_date" class="datepicker picker__input form-control" name="date_order" type="text" placeholder="date" value="" equired data-error="Please enter Date">
+                                        <input id="input_date" class="datepicker picker__input form-control" name="date" type="text" value="" equired data-error="Please enter Date">
                                         <div class="help-block with-errors"></div>
                                     </div>                                 
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input id="input_time" class="time form-control picker__input" name="time_order" placeholder="" required data-error="Please enter time">
+                                        <input id="input_time" class="time form-control picker__input" required data-error="Please enter time">
                                         <div class="help-block with-errors"></div>
                                     </div>                                 
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <select class="custom-select d-block form-control" id="person" name="number_order" required data-error="Please select Person">
+                                        <select class="custom-select d-block form-control" id="person" required data-error="Please select Person">
                                           <option disabled selected>Select Person*</option>
                                           <option value="1">1</option>
                                           <option value="2">2</option>
@@ -59,36 +59,37 @@
                                     </div> 
                                 </div>
                             </div>
+                            
                             <div class="col-md-6">
                                 <h3>Contact Details</h3>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="user_name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
                                         <div class="help-block with-errors"></div>
                                     </div>                                 
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="user_email" required data-error="Please enter your email">
+                                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
                                         <div class="help-block with-errors"></div>
                                     </div> 
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Numbar" id="phone" class="form-control" name="user_phone" required data-error="Please enter your Numbar">
+                                        <input type="text" placeholder="Your Numbar" id="phone" class="form-control" name="phone" required data-error="Please enter your Numbar">
                                         <div class="help-block with-errors"></div>
                                     </div> 
                                 </div>
                             </div>
                             <div class="col-md-12">
+                            
                                 <div class="submit-button text-center">
-                                    <button class="btn btn-common" id="submit" 
-                                 
-                                    type="submit">Book Table</button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div> 
-                                    <div class="clearfix"></div> 
+                                    <button class="btn btn-common" id="submit" type="submit">Book Table</button>
+                                    
                                 </div>
                             </div>
+
+                            
                         </div>            
                     </form>
                 </div>
